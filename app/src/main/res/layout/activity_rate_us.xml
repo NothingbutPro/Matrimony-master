@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundbg">
+
+    <ImageView
+        android:id="@+id/iv_close_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_cross" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.ics.ar.matri.view.CustomTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/how_do_you_rate_matrimony_android_experience"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_rate_hand" />
+
+        <com.ics.ar.matri.view.CustomTextViewBold
+            android:id="@+id/buttonYes"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_white_line"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/i_love_it"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+        <com.ics.ar.matri.view.CustomTextView
+            android:id="@+id/tvRemindMeLater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/remind_me_later"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.ics.ar.matri.fragment.registration.SocialDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/login_margin_txt_top_10"
+        android:paddingRight="@dimen/login_margin_txt_top_10">
+
+        <com.ics.ar.matri.view.CustomTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_10"
+            android:text="@string/martial_details"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <com.ics.ar.matri.view.InputFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="visible">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etMaritial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/marital" />
+        </com.ics.ar.matri.view.InputFieldView>
+
+
+        <com.ics.ar.matri.view.InputOpenFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="gone">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etGotra"
+                android:layout_width="match_parent"
+                android:imeOptions="actionNext"
+                android:layout_height="wrap_content"
+                android:hint="@string/gotra"
+                android:singleLine="true" />
+        </com.ics.ar.matri.view.InputOpenFieldView>
+
+        <com.ics.ar.matri.view.InputOpenFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="gone">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etGotraNanihal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/gotra_nanihal"
+                android:singleLine="true" />
+        </com.ics.ar.matri.view.InputOpenFieldView>
+        <com.ics.ar.matri.view.InputFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="visible">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etCaste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/caste"
+                android:singleLine="true" />
+        </com.ics.ar.matri.view.InputFieldView>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/etsubCaste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="Sub Caste"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.ics.ar.matri.view.InputFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="gone">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etManglik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/manglik" />
+        </com.ics.ar.matri.view.InputFieldView>
+
+        <com.ics.ar.matri.view.CustomTextViewBold
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_10"
+            android:text="@string/birth_details"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+
+        <com.ics.ar.matri.view.InputFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="gone">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etBirthTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/birth_time" />
+        </com.ics.ar.matri.view.InputFieldView>
+
+        <com.ics.ar.matri.view.InputOpenFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_margin_txt_top_5"
+            android:visibility="visible">
+
+            <com.ics.ar.matri.view.CustomEditText
+                android:id="@+id/etBirthPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/birth_place"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:singleLine="true" />
+        </com.ics.ar.matri.view.InputOpenFieldView>
+
+
+    </LinearLayout>
+
+</ScrollView>

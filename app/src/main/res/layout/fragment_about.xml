@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/dogIV"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/about_us_back"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:background="#66000000">
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dogIV"
+        android:layout_marginTop="-80dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="15dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="35dp"
+            android:orientation="vertical">
+
+            <com.ics.ar.matri.view.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arsh Muslim Marriage"
+                android:textSize="16sp" />
+
+            <com.ics.ar.matri.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Gotegaon, Distt.Narsinghpur"
+                android:textSize="16sp" />
+
+            <com.ics.ar.matri.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="(M.P.)"
+                android:textSize="16sp" />
+
+            <com.ics.ar.matri.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Version: 1.0.0"
+                android:textSize="16sp" />
+
+            <com.ics.ar.matri.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Launched: 20th Nov 2018"
+                android:textSize="16sp" />
+
+            <com.ics.ar.matri.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autoLink="email"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/contact_us_about"
+                android:textStyle="bold" />
+
+            <!--  <com.ics.ar.matri.view.CustomTextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:autoLink="web"
+                  android:gravity="center"
+                  android:linksClickable="true"
+                  android:text="@string/support_about"
+                  android:textStyle="bold" />-->
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroundbg">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/imageLyout"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                   android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/drawe_logo"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="1dp" />
+
+                </LinearLayout>
+
+                <com.ics.ar.matri.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageLyout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/we_are_uploading_only_5_images"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <com.ics.ar.matri.view.CustomTextView
+                    android:id="@+id/tvAddImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageLyout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-25dp"
+                    android:background="@drawable/back_rounded"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/add_images"
+                    android:visibility="visible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/imageLyout"
+                    android:layout_marginEnd="@dimen/iv_add_img"
+                    android:src="@drawable/ic_add_img"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/rlRed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/imageLyout"
+                    android:layout_marginEnd="@dimen/iv_add_img"
+                    android:background="@drawable/circle_red"
+                    android:visibility="gone">
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvImageCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?actionBarSize"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_left_arrow"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llbiodata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?actionBarSize"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_biodata_seen" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_user" />
+
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivUser"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditSelf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvHeight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvIncome"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/LL1"
+                        android:orientation="horizontal">
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvGotra"
+                            android:layout_width="0dp"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/LL3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/LL2"
+                        android:orientation="horizontal">
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvDistrict"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvState"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCritical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_user" />
+
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivCritical"
+                            android:text="@string/critical_fields"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditCritical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvDob"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvMaritalStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvAadhaar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivAstro"
+                            android:text="@string/kundli_amp_astro"
+                            android:textColor="@color/off_black"
+                            android:textSize="16sp" />
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:text="@string/time_of_birth"
+                            android:textColor="@color/off_black"
+                            android:layout_marginTop="5dp"
+                            android:textSize="14sp" />
+
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvBirthTime"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/birth_place1"
+                            android:textColor="@color/off_black"
+                            android:layout_marginTop="5dp"
+                            android:textSize="14sp" />
+
+                        <com.ics.ar.matri.view.CustomTextView
+                            android:id="@+id/tvBirthCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/off_black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/these_fields_can_be_edited_only_once"
+                        android:textColor="@color/red_900"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivAbout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_about" />
+
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivAbout"
+                            android:text="@string/about_me"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditAbout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/appearance"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvBodyType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/blood_group"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvBlood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/special_cases"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivImportant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_career" />
+
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivImportant"
+                            android:text="@string/important_details"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditImportant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/education"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvEducation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/employed_as"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvWorkArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivLife"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_life_style" />
+
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivLife"
+                            android:text="@string/lifestyle"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                        <ImageView
+                            android:id="@+id/ivEditLifestyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvLife"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/interests"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvInterests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hobbies"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvHobbies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivFamily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_family" />
+
+                        <com.ics.ar.matri.view.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivFamily"
+                            android:text="@string/family"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditFamily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/family_background"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/family_income"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/father_occupation1"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFatherOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/mother_occupation1"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvMotherOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/brother_sister1"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvBro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvSis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/family_based_out_of"
+                        android:textColor="@color/off_black"
+                        android:textSize="16sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyBased"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyPin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+                    <com.ics.ar.matri.view.CustomTextView
+                        android:id="@+id/tvFamilyWhatsup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/off_black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"></LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

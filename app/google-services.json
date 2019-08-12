@@ -1,0 +1,148 @@
+{
+  "project_info": {
+    "project_number": "428541405821",
+    "firebase_url": "https://arsh-muslim-marriage.firebaseio.com",
+    "project_id": "arsh-muslim-marriage",
+    "storage_bucket": "arsh-muslim-marriage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428541405821:android:b66731e29d29dd8a",
+        "android_client_info": {
+          "package_name": "com.arsh.ics.matrimony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428541405821-10d86611p63l0v67kcer48021heph6k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBulxtHDyZQu8P74Z_3CCUNefeWDnu4jBM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428541405821:android:fdc2e8916ac38d76",
+        "android_client_info": {
+          "package_name": "com.arshmuslim.matrimony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428541405821-10d86611p63l0v67kcer48021heph6k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBulxtHDyZQu8P74Z_3CCUNefeWDnu4jBM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428541405821:android:0d58eda75e9326cc",
+        "android_client_info": {
+          "package_name": "com.ics.ar.matri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428541405821-10d86611p63l0v67kcer48021heph6k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBulxtHDyZQu8P74Z_3CCUNefeWDnu4jBM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428541405821:android:5cfbd2dbdfba9d2b",
+        "android_client_info": {
+          "package_name": "com.samyotech.matrimony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428541405821-07um6c5s0021ekcfjvm78uq7j6ohna0v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samyotech.matrimony",
+            "certificate_hash": "b36c6a8bfaabbdedf854789568e2d5a1e8edff17"
+          }
+        },
+        {
+          "client_id": "428541405821-10d86611p63l0v67kcer48021heph6k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBulxtHDyZQu8P74Z_3CCUNefeWDnu4jBM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428541405821-10d86611p63l0v67kcer48021heph6k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

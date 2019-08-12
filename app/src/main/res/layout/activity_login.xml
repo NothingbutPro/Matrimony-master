@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ics.ar.matri.activity.loginsignup.Login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:id="@+id/marryMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_marry_me" />
+
+            <com.ics.ar.matri.view.CustomTextViewBold
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/login_margin_txt_top_15"
+                android:text="@string/meet_your_dream_partner"
+                android:textColor="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:visibility="gone" />
+
+            <com.ics.ar.matri.view.CustomTextViewBold
+                android:id="@+id/label_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_margin_txt_top_25"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/enter_your_number_and_password_below_to_get_access"
+                android:textColor="@color/white_alpha"
+                android:textSize="@dimen/abc_text_size_small_material" />
+
+            <RelativeLayout
+                android:id="@+id/number_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/login_margin_txt_top_10">
+
+                <ImageView
+                    android:id="@+id/number_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/etNumber"
+                    android:src="@drawable/ic_call_white" />
+
+                <com.ics.ar.matri.view.ExtendedEditText
+                    android:id="@+id/etNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:digits="0123456789"
+                    android:hint="xxx-xxx-xxxx "
+                    android:imeOptions="actionGo|actionSearch|actionDone|actionPrevious"
+                    android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_alpha"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/number_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/login_margin_txt_top_5">
+
+                <ImageView
+                    android:id="@+id/password_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/etPassword"
+                    android:src="@drawable/ic_password" />
+
+                <com.ics.ar.matri.view.CustomEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:hint="@string/password1"
+                    android:imeOptions="actionGo|actionSearch|actionDone|actionPrevious"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_alpha"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </RelativeLayout>
+
+            <com.ics.ar.matri.view.CustomButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_margin_txt_top_15"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btnbg"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/white" />
+
+            <com.ics.ar.matri.view.CustomTextView
+                android:id="@+id/tvForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/login_margin_txt_top_5"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:text="@string/forgot_password"
+                android:textColor="@color/white_alpha"
+                android:textSize="@dimen/abc_text_size_menu_material" />
+
+            <Button
+                android:visibility="gone"
+                android:background="@color/colorPrimary"
+                android:id="@+id/tvCreateNewAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/login_margin_txt_top_5"
+                android:padding="10dp"
+                android:text="@string/create_a_new_account"
+                android:textColor="@color/white_alpha"
+                android:textSize="@dimen/abc_text_size_menu_material" />
+
+            <!--<com.ics.ar.matri.view.CustomButton-->
+                <!--android:id="@+id/btnSearch"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/login_margin_txt_top_5"-->
+                <!--android:layout_marginBottom="@dimen/login_margin_txt_top_5"-->
+                <!--android:background="@drawable/button_selector_red"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/nav_search"-->
+                <!--android:textColor="@color/white" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RRsncbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentBottom="true"></RelativeLayout>
+
+</RelativeLayout>

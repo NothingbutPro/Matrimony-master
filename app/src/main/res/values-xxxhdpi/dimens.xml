@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_margin_txt_top_15">35dp</dimen>
+    <dimen name="login_margin_txt_top_25">45dp</dimen>
+    <dimen name="login_margin_txt_top_10">30dp</dimen>
+    <dimen name="login_margin_txt_top_5">25dp</dimen>
+    <dimen name="iv_add_img">140dp</dimen>
+    <dimen name="bio_margin_top">1.5dp</dimen>
+    <dimen name="bio_text_size">14.8dp</dimen>
+    <dimen name="text_header_bio">18sp</dimen>
+    <dimen name="dialog_back">320dp</dimen>
+</resources>
